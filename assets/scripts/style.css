@@ -11,8 +11,8 @@ body {
 }
 
 .card_all {
-    width: 350px;
-    height: 550px;
+    width: 22rem;
+    height: 34rem;
     padding: 0.5rem 1rem;
     border-radius: 8px;
     display: flex;
