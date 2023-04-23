@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    padding: 5rem;
+}
+
+.card_all {
+    width: 350px;
+    height: 550px;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #607e86;
+}
+
+#profile {
+    margin-top: 1rem;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #77b7ac;
+    padding: 0.4rem;
+}
+
+#descricao {
+    color: #fff;
+    font-size: 15px;
+    text-align: left;
+    padding-left: 1rem;
+}
+
+#card_title {
+    color: #ed8c84;
+    padding-left: 1rem;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+.social {
+    height: 45px;
+    width: 45px;
+}
+
+#nome {
+    color: #fff;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: -10px;
+}
+
+#cargo {
+    font-weight: bold;
+    color: #77b7ac;
+    text-align: center;
+}
+
+.botoes {
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    text-align: end;
+    padding-top: 65px;
+    font-size: 1rem
+}
+
+.botoes:hover {
+    color: #fff;
+    border-bottom: solid 3px #ed8c84;
+    padding-bottom: 0.5rem;
+}
