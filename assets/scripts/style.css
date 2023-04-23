@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 5rem;
+    min-width: 400px;
 }
 
 .card_all {
