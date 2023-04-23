@@ -1,5 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+}
+
+:root {
+    --card-height: 75vh;
+    --card-width: calc(var(--card-height) / 1.5);
+    font-size: 14px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-image: url(../img/background.jpg);
@@ -8,19 +20,63 @@ body {
     display: flex;
     justify-content: center;
     padding: 5rem;
-    min-width: 400px;
-    height: 100%;
 }
 
 .card_all {
-    width: 22rem;
-    height: 34rem;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    border-radius: 6px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #607e86;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    background: #191c29;
+}
+
+.card_all::before {
+    content: "";
+    width: 104%;
+    height: 102%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    position: absolute;
+    z-index: -1;
+    top: -1%;
+    left: -2%;
+    animation: spin 2.5s linear infinite;
+}
+
+.card_all::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+    var(--rotate)
+    , #5ddcff, #3c67e3 43%, #4e00c2);
+    opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        --rotate: 0deg;
+    }
+    100% {
+        --rotate: 360deg;
+    }
 }
 
 #profile {
@@ -29,26 +85,7 @@ body {
     border-radius: 50%;
     border: 2px solid #77b7ac;
     padding: 0.4rem;
-}
-
-#descricao {
-    color: #fff;
-    font-size: 15px;
-    text-align: left;
-    padding-left: 1rem;
-}
-
-#card_title {
-    color: #ed8c84;
-    padding-left: 1rem;
-    font-size: 15px;
-    font-weight: bold;
-    margin-bottom: -10px;
-}
-
-.social {
-    height: 3rem;
-    width: 3rem;
+    margin-top: 1rem;
 }
 
 #nome {
@@ -60,21 +97,43 @@ body {
 }
 
 #cargo {
-    font-weight: bold;
     color: #77b7ac;
     text-align: center;
 }
 
+#card_title {
+    color: #ed8c84;
+    padding-left: 1.2rem;
+    font-size: .8em;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+#descricao {
+    color: #fff;
+    font-size: .75em;
+    text-align: left;
+    padding-left: 1.2rem;
+    padding-right: .7rem;
+    margin-bottom: 2rem;
+}
+
+.social {
+    height: 3rem;
+    width: 3rem;
+}
+
 .botoes {
+    color: #fff;
     cursor: pointer;
     background-color: transparent;
     border: transparent;
-    margin-top: 4rem;
-    font-size: 1rem;
+    margin-top: 6rem;
+    font-size: .8em;
 }
 
 .botoes:hover {
-    color: #fff;
+    color: #ed8c84;
     border-bottom: solid 3px #ed8c84;
     padding-bottom: 0.5rem;
 }
