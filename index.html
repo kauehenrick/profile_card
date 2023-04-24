@@ -1,36 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Card</title>
     <link rel="stylesheet" href="assets/stylesheets/style.css">
     <link rel="shortcut icon" href="assets/img/khicon.ico">
+    <title>Profile Card</title>
 </head>
+
 <body>
-    <div class="card_all">
-        <div class="card_top">
-            <img id="profile" src="assets/img/profile_kaue.png" alt="foto de perfil">
-            <p id="nome">Kauê Henrick</p>
-            <p id="cargo">Dev. Front-end</p>
+    <div class="card" data-state="#about">
+        <div class="card-header">
+            <div class="card-cover"
+                style="background-image: url('https://www.waterrf.org/sites/default/files/styles/half_column/public/image/2022-09/white-and-black-mountain-wallpaper-933054.jpg?itok=H3yhLAS5')">
+            </div>
+            <img class="card-avatar" src="assets/img/profile_kaue.png" alt="avatar">
+            <h1 class="card-fullname">Kauê Henrick</h1>
+            <h2 class="card-jobtitle">Dev frontend</h2>
         </div>
-        <div class="card_content">
-            <p id="card_title">Sobre mim</p>
-            <p id="descricao">Apaixonado pela área da tecnologia, estudante e apreciador da mesma. Atualmente me especializando em Desenvolvimento Web.</p>
-        </div>
-        <div>
-            <a href="https://www.facebook.com/kauehenrick00/" target="_blank"><img class="social" src="assets/img/facebook_icon.png" alt="logo do facebook"></a>
-            <a href="https://www.instagram.com/k.a.ue/" target="_blank"><img class="social" src="assets/img/instagram_icon.png" alt="logo do instagram"></a>
-            <a href="https://www.linkedin.com/in/kauehenrick/" target="_blank"><img class="social" src="assets/img/linkedin_icon.png" alt="logo do linkedin"></a>
-            <a href="https://github.com/kauehenrick" target="_blank"><img class="social" src="assets/img/github_icon.png" alt="logo do github"></a>
-        </div>
-        <div class="menu">
-            <input type="button" class="botoes" value="Sobre mim">
-            <input type="button" class="botoes" value="Formação e experiência">
-            <input type="button" class="botoes" value="Contato">
+        <div class="card-main">
+            <div class="card-section is-active" id="about">
+                <div class="card-content">
+                    <div class="card-subtitle">Sobre mim</div>
+                    <p class="card-desc">Apaixonado pela área da tecnologia. Atualmente me especializando em
+                        Desenvolvimento Web.</p>
+                </div>
+                <div class="card-social">
+                    <a href="https://www.facebook.com/kauehenrick00/" target="_blank"><img class="social"
+                            src="assets/img/facebook_icon.png" alt="logo do facebook"></a>
+                    <a href="https://www.instagram.com/k.a.ue/" target="_blank"><img class="social"
+                            src="assets/img/instagram_icon.png" alt="logo do instagram"></a>
+                    <a href="https://www.linkedin.com/in/kauehenrick/" target="_blank"><img class="social"
+                            src="assets/img/linkedin_icon.png" alt="logo do linkedin"></a>
+                    <a href="https://github.com/kauehenrick" target="_blank"><img class="social"
+                            src="assets/img/github_icon.png" alt="logo do github"></a>
+                </div>
+            </div>
+            <div class="card-section" id="experience">
+                <div class="card-content">
+                    <div class="card-subtitle">Experiencia de trabalho</div>
+                    <div class="card-timeline">
+                        <div class="card-item" data-year="2021">
+                            <div class="card-item-title">Desenvolvedora na <span>Empresa A</span></div>
+                            <div class="card-item-desc">Criando sites</div>
+                        </div>
+                        <div class="card-item" data-year="2022">
+                            <div class="card-item-title">Designer na <span>Empresa Y</span></div>
+                            <div class="card-item-desc">UX/UI design</div>
+                        </div>
+                        <div class="card-item" data-year="2023">
+                            <div class="card-item-title">Desenvolvedora na <span>Empresa X</span></div>
+                            <div class="card-item-desc">Líder equipe</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-section" id="contact">
+                <div class="card-content">
+                    <div class="card-subtitle">Contato</div>
+                    <div class="card-contact-wrapper">
+                        <div class="card-contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Brasil, Bahia, Barreiras
+                        </div>
+                        <div class="card-contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
+                            </svg>(77) 9 9943-4338
+                        </div>
+                        <div class="card-contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <path d="M22 6l-10 7L2 6" />
+                            </svg>
+                            kauehenrick@proton.me
+                        </div>
+                        <button class="contact-me">Entre em contato</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-buttons">
+                <button data-section="#about" class="is-active">Sobre mim</button>
+                <button data-section="#experience">Experiencia de trabalho</button>
+                <button data-section="#contact">Contato</button>
+            </div>
         </div>
     </div>
-    
+    <script src="assets/scripts/script.js"></script>
 </body>
+
 </html>
